@@ -1,0 +1,22 @@
+nav {
+  height: 50px;
+  background-color: #1a1c18;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  .navlinks {
+    width: 100%;
+    ul {
+      width: 100%;
+      justify-content: space-evenly;
+      list-style: none;
+      display: flex;
+    }
+  }
+  a {
+    color: #dddeda;
+    text-decoration: none;
+  }
+
+
+}

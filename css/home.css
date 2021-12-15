@@ -1,0 +1,22 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero {
+  max-width: 1480px;
+  max-height: 1000px;
+  background-image: url(/images/Veneto-Divide_52.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dispatch .dispatch-holder {
+  background-image: url(/images/dispatch/thumb_1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+}
