@@ -1,49 +1,458 @@
+@use "mixins/_mixins";
+@media only screen and (max-width: 960px) {
+  .container {
+    flex-wrap: wrap;
+  }
+}
 .wrapper {
-  width: 100vw;
-  min-height: 100vh;
+  //
+  padding-bottom: 200px;
+  width: 90%;
+  margin: 0 auto;
 }
 .hero {
-  width: 100%;
-  // max-width: 1480px;
-  max-height: 1000px;
-  background-image: url(../../images/Veneto-Divide_52.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  text-transform: uppercase;
+  background-image: url(/images/hero.jpg);
+  // background-color: pink;
+  @include backgroundImage;
+  position: relative;
+  // width: 1480px;
+  height: 987px;
 }
-.dispatch {
+.hero-text {
+  @include flexC;
+  height: 900px;
+  flex-direction: column;
+}
+.hero-top-text {
+  color: #f2f1ee;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  line-height: 14px;
+  margin: 0px;
+  padding: 0px 0px 2px;
+  text-align: center;
+}
+.hero-middle-text {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: inherit;
+  color: #f2f1ee;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  font-size: 40px;
+  line-height: 39.6px;
+  margin: 0px;
+  padding: 0px 20px 16px;
+  text-align: center;
+}
+.hero-bottom-text {
+  box-sizing: inherit;
+  color: #f2f1ee;
+  cursor: pointer;
+  display: block;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  // font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  height: 22px;
+  letter-spacing: 2px;
+  line-height: 1em;
+  margin: 0px auto;
+  overflow: hidden;
+  padding: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+.hero-tab {
+  position: absolute;
+  background-color: $bpBrown;
+  @include flexC;
+  justify-content: flex-start;
+  clip-path: polygon(254px 60px, 242px 30px, 254px 0px, 0px 0px, 0px 60px);
+  height: 60px;
+  width: 300px;
+  margin-left: -10px;
+  margin-top: 80px;
+  img {
+    // height: 40px;
+    width: 245px;
+  }
+}
+/* ------------------------------------------------------ */
+.dispatch-holder {
+  padding: 30px;
+  background-color: $bpGreyMed;
+  // margin-bottom: 400px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.dispatch-title {
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.container {
+  @include flexSA;
+  // margin: 40px;
+}
+.dispatch-event {
+  width: 247px;
+  // height: 256px;
+  overflow: hidden;
   display: flex;
-  background-color: bisque;
-  height: 400px;
-  .dispatch-holder {
-    // background-image: url(/images/dispatch/thumb_1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 200px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  position: relative;
+
+  .date-time {
+    color: #848581;
+    top: 0;
+    padding-top: 10px;
+    // padding-bottom: 10px;
+    width: 90%;
+    font-weight: 800;
+    font-size: 10px;
+    // margin-bottom: 6px;
+  }
+  .dispatch-image {
+    @include backgroundImage;
+    height: 135px;
     width: 200px;
+    margin: 5px;
   }
-  .dispatch-one {
+  .dispatch-image:hover {
+    margin: 0;
+    height: 150px;
+    width: 215px;
+    // height: 145px;
+    // width: 210px;
+    transition: all 0.3s ease 0s;
+  }
+  .event1 {
+    background-image: url(/images/dispatch/thumb_1.jpg);
+  }
+  .event2 {
+    background-image: url(/images/dispatch/dispatch_1.jpg);
+  }
+  .event3 {
+    background-image: url(/images/dispatch/dispatch_4.jpg);
+  }
+  .event4 {
+    background-image: url(/images/dispatch/thumb_4.jpg);
+  }
+  .event5 {
+    background-image: url(/images/dispatch/thumb_5.jpg);
+  }
+  .event6 {
+    background-image: url(/images/dispatch/dispatch_2.jpg);
+  }
+  .title-bubble {
+    margin-top: 3px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    .title {
+      color: #1a1c18;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+      //
+      -webkit-font-smoothing: antialiased;
+      border: 0px;
+      box-sizing: border-box;
+      color: #1a1c18;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      text-align: left;
+    }
+    .bubble {
+      position: relative;
+      width: 24px;
+      height: 16px;
+      background-color: grey;
+      color: #fff;
+      font-size: 8px;
+      text-align: center;
+      padding-top: 4px;
+
+      .triangle {
+        position: absolute;
+        left: 5px;
+        bottom: -7px; //negative px pushes outside and lowers triangle
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 8px 0 0;
+        border-color: gray transparent transparent transparent;
+      }
+    }
   }
 }
-.advertisement {
-  //
+/* ------------------------------------------------------ */
+.background-wrap {
+  width: 100%;
+  // height: 2329px;
+  background-color: $bpGreyLight;
 }
-.statement-text {
-  //
+/* ------------------------------------------------------ */
+.sponsor-banner-wrap {
+  @include flexC;
+  padding: 20px;
 }
-.bikepacking101-img {
-  //
+.sponsorbanner {
+  width: 80%;
+  margin: 0 auto;
+  height: 150px;
+  @include backgroundImage;
+  background-image: url(/images/ad.jpg);
 }
-.explore {
-  //
+.section-summary {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.9em;
+  margin: 0px auto;
+  text-align: center;
+  width: 60%;
+  padding: 50px;
 }
-.sponsors {
-  //
+.bp101 {
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  @include backgroundImage;
+  background-image: url(/images/bikepacking-101.png);
+  height: 350px;
+  margin-bottom: 45px;
 }
 .explore-holder {
+  @include flexC;
+  position: relative;
+}
+.explore-title {
+  position: absolute;
+  top: -15px;
+  @include flexC;
+  background-color: $bpBrown;
+  clip-path: polygon(100% 0px, 97% 50%, 100% 100%, 0% 100%, 3% 50%, 0% 0%);
+  color: #dddeda;
+  font-size: 18px;
+  font-weight: 400;
+  height: 38px;
+  letter-spacing: 0.18em;
+  line-height: 18px;
+  margin: 0px 0px 1.5em;
+  text-align: center;
+  width: 130px;
+}
+.explore-card {
+  width: 340px;
+  height: 340px;
+  font-size: 15px;
+  line-height: 24px;
+  transition: opacity 0.2s ease-out 0s;
+  @include backgroundImage;
+}
+.explore-1 {
+  background-image: url(/images/home-explore-bikes.jpg);
+}
+.explore-2 {
+  background-image: url(/images/home-explore-gear.jpg);
+}
+.explore-3 {
+  background-image: url(/images/home-explore-packlists.jpg);
+}
+.explore-4 {
+  background-image: url(/images/home-explore-routes.jpg);
+}
+.explore-hover {
+  width: 100%;
+  height: 340px;
+  background-color: #1a1c18;
+
+  opacity: 0;
+}
+.explore-hover:hover {
+  transition: opacity 0.6s ease-out 0s;
+  opacity: 0.8;
+  box-sizing: inherit;
+  color: #f2f1ee;
+  cursor: pointer;
+  @include flexC;
+  font-style: normal;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* ------------------------------------------------------ */
+.sponsorLogos-holder {
+  @include flexC;
+  flex-direction: column;
+}
+.titleBanner {
+  //
+  color: #31312f;
+  font-size: 15px;
+  height: 38px;
+  left: 0px;
+  line-height: 24px;
+  margin: 0px;
+  outline: none;
+  padding: 20px;
+  position: relative;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+}
+.banner-inner {
+  clip-path: polygon(100% 0px, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+  background: #d0cfcd;
+  display: inline-block;
+  // font-family: font_condensed;
+  font-size: 18px;
+  height: 34px;
+  // letter-s@media printpacing: 0.18em;
+  line-height: 28.8px;
+  margin: 0px;
+  outline: none;
+  padding: 2px 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.sponsorLogo-title {
+  @include flexC;
+  background: #f2f1ee;
+  clip-path: polygon(100% 0px, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+  color: #848581;
+  font-family: font_condensed;
+  font-size: 13px;
+  font-weight: 400;
+  height: 30px;
+  letter-spacing: 0em;
+  line-height: 13px;
+  margin: 0px 0px 1.5em;
+  outline: none;
+  padding: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 400px;
+}
+.sponsorLogos {
+  // height: 430px;
+  width: 80%;
+  @include flexSA;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.companyLogo {
+  overflow: hidden;
+  @include flexC;
+  background-color: transparent;
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  img {
+    overflow: hidden;
+  }
+}
+.companyLogo:hover {
+  align-items: flex-end;
+}
+
+/* ------------------------------------------------------ */
+.bottom-wrapper {
+  background-color: $bpGreenB;
+  @include flexC;
+  padding: 50px;
+}
+.animal-image {
+  // width: 300px;
+  margin: 0 auto;
+  width: 420px;
+  height: 210px;
+  @include backgroundImage;
+
+  background-image: url(/images/bikepackingcom-coyote-trademark_texture.png);
+}
+.page-bottom-text {
+  width: 60%;
+  margin: 0 auto;
+  p {
+    padding: 15px;
+    text-align: center;
+  }
+}
+.pedal-further {
+  color: #a23d3b;
+  display: block;
+  // font-family: "Gotham SSm A", "Gotham SSm B";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 24px;
+  text-align: center;
+}
+.footer-social {
+  @include flexC;
+}
+.social-icon {
+  border: pink solid;
+  margin: 10px;
+  transition: color 0.1s linear 0s;
+  width: 118px;
+  height: 70px;
+}
+.footer-links {
+  padding: 50px;
+  @include flexSA;
+}
+.footer-links-col {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 11px;
+  color: $bpGreyLinks;
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: $bpOrangeA;
+  }
+}
+ul {
+  text-align: center;
+  list-style: none;
+  width: 300px;
+}
+li {
+  height: 25px;
+}
+.link-h {
   //
 }
-.page-bottom {
-  //
+.footer-copyright {
+  text-align: center;
+  color: #31312f;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22.4px;
 }

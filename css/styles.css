@@ -8,6 +8,7 @@
 
 html,
 body {
+  background-color: #1a1c18;
   height: 100%;
 }
 
@@ -21,34 +22,638 @@ p {
   margin-bottom: 16px;
 }
 
+@media only screen and (max-width: 960px) {
+  .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .wrapper {
-  width: 100vw;
-  min-height: 100vh;
+  padding-bottom: 200px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .hero {
+  text-transform: uppercase;
+  background-image: url(/images/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 987px;
+}
+
+.hero-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 900px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero-top-text {
+  color: #f2f1ee;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  line-height: 14px;
+  margin: 0px;
+  padding: 0px 0px 2px;
+  text-align: center;
+}
+
+.hero-middle-text {
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  color: #f2f1ee;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  font-size: 40px;
+  line-height: 39.6px;
+  margin: 0px;
+  padding: 0px 20px 16px;
+  text-align: center;
+}
+
+.hero-bottom-text {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  color: #f2f1ee;
+  cursor: pointer;
+  display: block;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: normal;
+  font-weight: 800;
+  height: 22px;
+  letter-spacing: 2px;
+  line-height: 1em;
+  margin: 0px auto;
+  overflow: hidden;
+  padding: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.hero-tab {
+  position: absolute;
+  background-color: #1a1c18;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-clip-path: polygon(254px 60px, 242px 30px, 254px 0px, 0px 0px, 0px 60px);
+          clip-path: polygon(254px 60px, 242px 30px, 254px 0px, 0px 0px, 0px 60px);
+  height: 60px;
+  width: 300px;
+  margin-left: -10px;
+  margin-top: 80px;
+}
+.hero-tab img {
+  width: 245px;
+}
+
+/* ------------------------------------------------------ */
+.dispatch-holder {
+  padding: 30px;
+  background-color: #dddeda;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.dispatch-title {
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.dispatch-event {
+  width: 247px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  position: relative;
+}
+.dispatch-event .date-time {
+  color: #848581;
+  top: 0;
+  padding-top: 10px;
+  width: 90%;
+  font-weight: 800;
+  font-size: 10px;
+}
+.dispatch-event .dispatch-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 135px;
+  width: 200px;
+  margin: 5px;
+}
+.dispatch-event .dispatch-image:hover {
+  margin: 0;
+  height: 150px;
+  width: 215px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.dispatch-event .event1 {
+  background-image: url(/images/dispatch/thumb_1.jpg);
+}
+.dispatch-event .event2 {
+  background-image: url(/images/dispatch/dispatch_1.jpg);
+}
+.dispatch-event .event3 {
+  background-image: url(/images/dispatch/dispatch_4.jpg);
+}
+.dispatch-event .event4 {
+  background-image: url(/images/dispatch/thumb_4.jpg);
+}
+.dispatch-event .event5 {
+  background-image: url(/images/dispatch/thumb_5.jpg);
+}
+.dispatch-event .event6 {
+  background-image: url(/images/dispatch/dispatch_2.jpg);
+}
+.dispatch-event .title-bubble {
+  margin-top: 3px;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.dispatch-event .title-bubble .title {
+  color: #1a1c18;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  border: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #1a1c18;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+}
+.dispatch-event .title-bubble .bubble {
+  position: relative;
+  width: 24px;
+  height: 16px;
+  background-color: grey;
+  color: #fff;
+  font-size: 8px;
+  text-align: center;
+  padding-top: 4px;
+}
+.dispatch-event .title-bubble .bubble .triangle {
+  position: absolute;
+  left: 5px;
+  bottom: -7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 0 0;
+  border-color: gray transparent transparent transparent;
+}
+
+/* ------------------------------------------------------ */
+.background-wrap {
   width: 100%;
-  max-height: 1000px;
-  background-image: url(../../images/Veneto-Divide_52.jpg);
+  background-color: #f2f1ee;
+}
+
+/* ------------------------------------------------------ */
+.sponsor-banner-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.sponsorbanner {
+  width: 80%;
+  margin: 0 auto;
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/images/ad.jpg);
+}
+
+.section-summary {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.9em;
+  margin: 0px auto;
+  text-align: center;
+  width: 60%;
+  padding: 50px;
+}
+
+.bp101 {
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/images/bikepacking-101.png);
+  height: 350px;
+  margin-bottom: 45px;
+}
+
+.explore-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.explore-title {
+  position: absolute;
+  top: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1a1c18;
+  -webkit-clip-path: polygon(100% 0px, 97% 50%, 100% 100%, 0% 100%, 3% 50%, 0% 0%);
+          clip-path: polygon(100% 0px, 97% 50%, 100% 100%, 0% 100%, 3% 50%, 0% 0%);
+  color: #dddeda;
+  font-size: 18px;
+  font-weight: 400;
+  height: 38px;
+  letter-spacing: 0.18em;
+  line-height: 18px;
+  margin: 0px 0px 1.5em;
+  text-align: center;
+  width: 130px;
+}
+
+.explore-card {
+  width: 340px;
+  height: 340px;
+  font-size: 15px;
+  line-height: 24px;
+  -webkit-transition: opacity 0.2s ease-out 0s;
+  transition: opacity 0.2s ease-out 0s;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.dispatch {
+.explore-1 {
+  background-image: url(/images/home-explore-bikes.jpg);
+}
+
+.explore-2 {
+  background-image: url(/images/home-explore-gear.jpg);
+}
+
+.explore-3 {
+  background-image: url(/images/home-explore-packlists.jpg);
+}
+
+.explore-4 {
+  background-image: url(/images/home-explore-routes.jpg);
+}
+
+.explore-hover {
+  width: 100%;
+  height: 340px;
+  background-color: #1a1c18;
+  opacity: 0;
+}
+
+.explore-hover:hover {
+  -webkit-transition: opacity 0.6s ease-out 0s;
+  transition: opacity 0.6s ease-out 0s;
+  opacity: 0.8;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  color: #f2f1ee;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: bisque;
-  height: 400px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-style: normal;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
 }
-.dispatch .dispatch-holder {
+
+/* ------------------------------------------------------ */
+.sponsorLogos-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.titleBanner {
+  color: #31312f;
+  font-size: 15px;
+  height: 38px;
+  left: 0px;
+  line-height: 24px;
+  margin: 0px;
+  outline: none;
+  padding: 20px;
+  position: relative;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+}
+
+.banner-inner {
+  -webkit-clip-path: polygon(100% 0px, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+          clip-path: polygon(100% 0px, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+  background: #d0cfcd;
+  display: inline-block;
+  font-size: 18px;
+  height: 34px;
+  line-height: 28.8px;
+  margin: 0px;
+  outline: none;
+  padding: 2px 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sponsorLogo-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #f2f1ee;
+  -webkit-clip-path: polygon(100% 0px, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+          clip-path: polygon(100% 0px, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+  color: #848581;
+  font-family: font_condensed;
+  font-size: 13px;
+  font-weight: 400;
+  height: 30px;
+  letter-spacing: 0em;
+  line-height: 13px;
+  margin: 0px 0px 1.5em;
+  outline: none;
+  padding: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 400px;
+}
+
+.sponsorLogos {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 50px;
+}
+
+.companyLogo {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+  text-decoration: none;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.companyLogo img {
+  overflow: hidden;
+}
+
+.companyLogo:hover {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+/* ------------------------------------------------------ */
+.bottom-wrapper {
+  background-color: #8a9675;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px;
+}
+
+.animal-image {
+  margin: 0 auto;
+  width: 420px;
+  height: 210px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 200px;
-  width: 200px;
+  background-image: url(/images/bikepackingcom-coyote-trademark_texture.png);
 }
+
+.page-bottom-text {
+  width: 60%;
+  margin: 0 auto;
+}
+.page-bottom-text p {
+  padding: 15px;
+  text-align: center;
+}
+
+.pedal-further {
+  color: #a23d3b;
+  display: block;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.footer-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social-icon {
+  border: pink solid;
+  margin: 10px;
+  -webkit-transition: color 0.1s linear 0s;
+  transition: color 0.1s linear 0s;
+  width: 118px;
+  height: 70px;
+}
+
+.footer-links {
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer-links-col {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 11px;
+  color: #31312f;
+}
+.footer-links-col a {
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #a23d3b;
+}
+
+ul {
+  text-align: center;
+  list-style: none;
+  width: 300px;
+}
+
+li {
+  height: 25px;
+}
+
+.footer-copyright {
+  text-align: center;
+  color: #31312f;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22.4px;
+}
+
 nav {
   height: 50px;
   background-color: #1a1c18;
@@ -61,12 +666,16 @@ nav {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  text-transform: uppercase;
+  color: #31312f;
+  font-family: Helvetica, "Helvetica Neue", Arial;
 }
 nav .navlinks {
   width: 100%;
 }
 nav .navlinks ul {
-  width: 100%;
+  margin: 0 auto;
+  width: 60%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -76,6 +685,34 @@ nav .navlinks ul {
   display: flex;
 }
 nav a {
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  line-height: 14px;
   color: #dddeda;
   text-decoration: none;
+  cursor: pointer;
+}
+nav a:hover {
+  color: #d2dfc9;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  -webkit-text-decoration-color: #747f5a;
+          text-decoration-color: #747f5a;
+  -webkit-transition: all 0.1s ease-in-out 0s;
+  transition: all 0.1s ease-in-out 0s;
+}
+
+.nav-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.icons {
+  margin: 5px;
+  border: white solid;
+  width: 40px;
+  height: 40px;
 }

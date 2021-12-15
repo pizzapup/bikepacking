@@ -1,0 +1,41 @@
+$bpBrown: #1a1c18;
+$bpGreen: #747f5a;
+$bpGreenB: #8a9675;
+$bpOrangeA: #a23d3b;
+// $bpOrangeB: #a43d3b;
+$bpGreyDark: #7b807f;
+$bpGreyMed: #dddeda;
+$bpGreyLight: #f2f1ee;
+$bpGreyLinks: #31312f;
+
+@mixin backgroundImage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@mixin flexC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flexSA {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@mixin flexSB {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flexSE {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@mixin flexCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

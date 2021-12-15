@@ -4,19 +4,42 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  text-transform: uppercase;
+  color: #31312f;
+  font-family: Helvetica, "Helvetica Neue", Arial;
   .navlinks {
     width: 100%;
     ul {
-      width: 100%;
+      margin: 0 auto;
+      width: 60%;
       justify-content: space-evenly;
       list-style: none;
       display: flex;
     }
   }
   a {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    line-height: 14px;
     color: #dddeda;
     text-decoration: none;
+    cursor: pointer;
   }
-
-
+  a:hover {
+    color: #d2dfc9;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #747f5a;
+    transition: all 0.1s ease-in-out 0s;
+  }
+}
+.nav-icons {
+  display: flex;
+  justify-content: space-around;
+}
+.icons {
+  margin: 5px;
+  border: white solid;
+  width: 40px;
+  height: 40px;
 }
