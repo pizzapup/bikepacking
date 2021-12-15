@@ -12,7 +12,7 @@
 }
 .hero {
   text-transform: uppercase;
-  background-image: url(/images/hero.jpg);
+  background-image: url(../images/hero.jpg);
   // background-color: pink;
   @include backgroundImage;
   position: relative;
@@ -140,22 +140,22 @@
     transition: all 0.3s ease 0s;
   }
   .event1 {
-    background-image: url(/images/dispatch/thumb_1.jpg);
+    background-image: url(../images/dispatch/thumb_1.jpg);
   }
   .event2 {
-    background-image: url(/images/dispatch/dispatch_1.jpg);
+    background-image: url(../images/dispatch/dispatch_1.jpg);
   }
   .event3 {
-    background-image: url(/images/dispatch/dispatch_4.jpg);
+    background-image: url(../images/dispatch/dispatch_4.jpg);
   }
   .event4 {
-    background-image: url(/images/dispatch/thumb_4.jpg);
+    background-image: url(../images/dispatch/thumb_4.jpg);
   }
   .event5 {
-    background-image: url(/images/dispatch/thumb_5.jpg);
+    background-image: url(../images/dispatch/thumb_5.jpg);
   }
   .event6 {
-    background-image: url(/images/dispatch/dispatch_2.jpg);
+    background-image: url(../images/dispatch/dispatch_2.jpg);
   }
   .title-bubble {
     margin-top: 3px;
@@ -217,7 +217,7 @@
   margin: 0 auto;
   height: 150px;
   @include backgroundImage;
-  background-image: url(/images/ad.jpg);
+  background-image: url(../images/ad.jpg);
 }
 .section-summary {
   font-size: 14px;
@@ -233,7 +233,7 @@
   margin: 0 auto;
   height: auto;
   @include backgroundImage;
-  background-image: url(/images/bikepacking-101.png);
+  background-image: url(../images/bikepacking-101.png);
   height: 350px;
   margin-bottom: 45px;
 }
@@ -266,16 +266,16 @@
   @include backgroundImage;
 }
 .explore-1 {
-  background-image: url(/images/home-explore-bikes.jpg);
+  background-image: url(../images/home-explore-bikes.jpg);
 }
 .explore-2 {
-  background-image: url(/images/home-explore-gear.jpg);
+  background-image: url(../images/home-explore-gear.jpg);
 }
 .explore-3 {
-  background-image: url(/images/home-explore-packlists.jpg);
+  background-image: url(../images/home-explore-packlists.jpg);
 }
 .explore-4 {
-  background-image: url(/images/home-explore-routes.jpg);
+  background-image: url(../images/home-explore-routes.jpg);
 }
 .explore-hover {
   width: 100%;
@@ -390,7 +390,7 @@
   height: 210px;
   @include backgroundImage;
 
-  background-image: url(/images/bikepackingcom-coyote-trademark_texture.png);
+  background-image: url(../images/bikepackingcom-coyote-trademark_texture.png);
 }
 .page-bottom-text {
   width: 60%;
