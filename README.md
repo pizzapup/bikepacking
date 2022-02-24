@@ -9,3 +9,6 @@ Some of the features I enjoyed adding:
 
 > Image capture of sponsor logo section:
 ![sponsors](https://user-images.githubusercontent.com/57334884/155232715-26de1b0c-c07f-4347-bc46-b2ba79627bf2.png)
+
+> Image capture of hero section:
+![image](https://user-images.githubusercontent.com/57334884/155596444-dfc35aaa-ba92-41cd-9ab4-8b7a73e027bd.png)
