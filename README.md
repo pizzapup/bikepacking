@@ -1,4 +1,4 @@
-# [Bikepacking.com](https://in-info-web4.informatics.iupui.edu/~arihardw/homework-two/)
+# Bikepacking.com
 
 > Visit Site: [Bikepacking Site](https://stellular-cannoli-9bacad.netlify.app/)
 
